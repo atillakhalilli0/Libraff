@@ -1,0 +1,1576 @@
+{
+  "kitablar": [
+    {
+      "id": 1,
+      "title": "Axırıncı Qartal",
+      "author": "Lev Tolstoy",
+      "price": 22,
+      "image": "https://picsum.photos/seed/book1/1000/1000",
+      "category": "Bədii",
+      "subcategory": [
+        "klassik",
+        "dram",
+        "əsər"
+      ],
+      "language": [
+        "AZ",
+        "RU",
+        "EN"
+      ],
+      "stockCount": 5,
+      "sold": 3,
+      "viewed": 12,
+      "comments": [
+        {
+          "name": "Şəfəq Əhmədova",
+          "date": "2024-12-12",
+          "comment": "Əsərdə insan ruhunun dərinliklərinə toxunulur."
+        },
+        {
+          "name": "Eldar Məhərrəmov",
+          "date": "2024-11-23",
+          "comment": "Klassik üslub müasir oxucu üçün də təsirlidir."
+        }
+      ],
+      "description": ""
+    },
+    {
+      "id": 2,
+      "title": "Leyli və Məcnun",
+      "author": "Nizami Gəncəvi",
+      "price": 15,
+      "image": "https://picsum.photos/seed/book2/1000/1000",
+      "category": "Bədii",
+      "subcategory": [
+        "klassik",
+        "məhəbbət",
+        "dastan"
+      ],
+      "language": [
+        "AZ",
+        "FA"
+      ],
+      "stockCount": 8,
+      "sold": 12,
+      "viewed": 45,
+      "comments": [
+        {
+          "name": "Kəmalə Vəliyeva",
+          "date": "2024-12-01",
+          "comment": "Nizami’nin xəyal dünyası xəyaləti oyadır."
+        },
+        {
+          "name": "Elnur Qasımov",
+          "date": "2024-11-12",
+          "comment": "Əsərin universal, zamandankənar gücü var."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Susqun Rəqslər",
+      "author": "Orxan Məmmədov",
+      "price": 16,
+      "image": "https://picsum.photos/seed/book3/1000/1000",
+      "category": "Bədii",
+      "subcategory": [
+        "modern",
+        "dram"
+      ],
+      "language": [
+        "AZ"
+      ],
+      "stockCount": 10,
+      "sold": 7,
+      "viewed": 30,
+      "comments": [
+        {
+          "name": "Ləman Rüstəmova",
+          "date": "2024-10-10",
+          "comment": "Müasir insanın iç dünyasını qüsursuz əhatə edir."
+        },
+        {
+          "name": "Namiq Həsənov",
+          "date": "2024-09-15",
+          "comment": "Dil və obrazlar orijinal və təsirlidir."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Küləklə Qanadlananlar",
+      "author": "Səbinə Əliyeva",
+      "price": 17,
+      "image": "https://picsum.photos/seed/book4/1000/1000",
+      "category": "Bədii",
+      "subcategory": [
+        "romantika",
+        "dram"
+      ],
+      "language": [
+        "AZ"
+      ],
+      "stockCount": 12,
+      "sold": 9,
+      "viewed": 40,
+      "comments": [
+        {
+          "name": "Rəşad Quliyev",
+          "date": "2024-11-01",
+          "comment": "Roman romantikası incə toxunuşlarla verilib."
+        },
+        {
+          "name": "Aytac Əliyeva",
+          "date": "2024-10-20",
+          "comment": "Obrazlar mənəvi oyanışa səbəb oldu."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Boş Qapıların Səssizliyi",
+      "author": "Emin Hacıyev",
+      "price": 18,
+      "image": "https://picsum.photos/seed/book5/1000/1000",
+      "category": "Bədii",
+      "subcategory": [
+        "sir",
+        "psixoloji"
+      ],
+      "language": [
+        "AZ"
+      ],
+      "stockCount": 8,
+      "sold": 11,
+      "viewed": 50,
+      "comments": [
+        {
+          "name": "Sevinc Məmmədova",
+          "date": "2024-09-07",
+          "comment": "Hekayənin sirli atmosferi olduqca təsirli."
+        },
+        {
+          "name": "Orxan Hüseynli",
+          "date": "2024-08-22",
+          "comment": "Müəllif psixoloji detalları ustalıqla çatdırır."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Zümrüd Rəngi",
+      "author": "Leyla Hüseynova",
+      "price": 19,
+      "image": "https://picsum.photos/seed/book6/1000/1000",
+      "category": "Bədii",
+      "subcategory": [
+        "macəra",
+        "klassik"
+      ],
+      "language": [
+        "AZ"
+      ],
+      "stockCount": 14,
+      "sold": 13,
+      "viewed": 60,
+      "comments": [
+        {
+          "name": "Murad Əliyev",
+          "date": "2024-07-15",
+          "comment": "Müxtəlif mədəniyyətləri əhatə edən maraqlı macəra."
+        },
+        {
+          "name": "Gülnar Abbasova",
+          "date": "2024-07-01",
+          "comment": "Oxuyarkən gözlənilməz dönüşlər oldu."
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Qaranlıq Saatlar",
+      "author": "Rövşən Nəcəfov",
+      "price": 17,
+      "image": "https://picsum.photos/seed/book7/1000/1000",
+      "category": "Bədii",
+      "subcategory": [
+        "thriller",
+        "dram"
+      ],
+      "language": [
+        "AZ"
+      ],
+      "stockCount": 10,
+      "sold": 8,
+      "viewed": 45,
+      "comments": [
+        {
+          "name": "Elgün Babayev",
+          "date": "2024-06-27",
+          "comment": "Gərginlik son səhifəyə qədər davam edir."
+        },
+        {
+          "name": "Şəms Quliyeva",
+          "date": "2024-06-10",
+          "comment": "Oxucu ilə musiqili ritm kimi qurulub."
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Qəlbimin Sirləri",
+      "author": "Kamran Hüseynli",
+      "price": 18,
+      "image": "https://picsum.photos/seed/book8/1000/1000",
+      "category": "Bədii",
+      "subcategory": [
+        "romantika",
+        "psixoloji"
+      ],
+      "language": [
+        "AZ"
+      ],
+      "stockCount": 12,
+      "sold": 14,
+      "viewed": 55,
+      "comments": [
+        {
+          "name": "Aysel Quliyeva",
+          "date": "2024-05-20",
+          "comment": "Eyni dildə yazılan sevgi hekayəsi gözəldir."
+        },
+        {
+          "name": "Rəşad Məlikov",
+          "date": "2024-05-05",
+          "comment": "Oxuyarkən özüm kimi hiss etdim."
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Səssiz Dərya",
+      "author": "Səkinə Mehdiyeva",
+      "price": 16,
+      "image": "https://picsum.photos/seed/book9/1000/1000",
+      "category": "Bədii",
+      "subcategory": [
+        "dram",
+        "təbiət"
+      ],
+      "language": [
+        "AZ"
+      ],
+      "stockCount": 15,
+      "sold": 10,
+      "viewed": 40,
+      "comments": [
+        {
+          "name": "Fidan Hüseynova",
+          "date": "2024-04-28",
+          "comment": "Təbiət təsvirləri canlı və duyğuludur."
+        },
+        {
+          "name": "Nurlan Quliyev",
+          "date": "2024-04-13",
+          "comment": "Əsərin emosiyası dərin iz buraxır."
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Göy Qalası",
+      "author": "Rüfət Məmmədov",
+      "price": 19,
+      "image": "https://picsum.photos/seed/book10/1000/1000",
+      "category": "Bədii",
+      "subcategory": [
+        "fantastika",
+        "macəra"
+      ],
+      "language": [
+        "AZ"
+      ],
+      "stockCount": 10,
+      "sold": 11,
+      "viewed": 52,
+      "comments": [
+        {
+          "name": "Zəhra Əliyeva",
+          "date": "2024-03-17",
+          "comment": "Gələcək dünyaları ustalıqla təsvir edilmiş."
+        },
+        {
+          "name": "Aytən Məlikova",
+          "date": "2024-02-28",
+          "comment": "Həqiqətən baxış açımı dəyişdi."
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Yuxusuz Şəhər",
+      "author": "Eldar Həsənli",
+      "price": 18,
+      "image": "https://picsum.photos/seed/book11/1000/1000",
+      "category": "Bədii",
+      "subcategory": [
+        "distopiya"
+      ],
+      "language": [
+        "AZ"
+      ],
+      "stockCount": 13,
+      "sold": 14,
+      "viewed": 58,
+      "comments": [
+        {
+          "name": "Təranə Məmmədova",
+          "date": "2024-02-05",
+          "comment": "Distopik atmosfer çox dərin hiss olunur."
+        },
+        {
+          "name": "Orxan Hüseynli",
+          "date": "2024-01-20",
+          "comment": "Futuristik tonlar ustalıqla qarışdırılıb."
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Sükutun Səsi",
+      "author": "Əfsanə Cavadova",
+      "price": 15,
+      "image": "https://picsum.photos/seed/book12/1000/1000",
+      "category": "Bədii",
+      "subcategory": [
+        "psixoloji",
+        "dram"
+      ],
+      "language": [
+        "AZ"
+      ],
+      "stockCount": 11,
+      "sold": 8,
+      "viewed": 35,
+      "comments": [
+        {
+          "name": "Şahin Məmmədov",
+          "date": "2024-01-05",
+          "comment": "Sükut bu qədər danışan olmamışdı."
+        },
+        {
+          "name": "İlahə Səfərova",
+          "date": "2023-12-22",
+          "comment": "Möhtəşəm psixoloji portretlər."
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Göyərçinlər Üzərimizdən Uçurdu",
+      "author": "Elçin Cəfərov",
+      "price": 17,
+      "image": "https://picsum.photos/seed/book13/1000/1000",
+      "category": "Bədii",
+      "subcategory": [
+        "modern",
+        "esse"
+      ],
+      "language": [
+        "AZ"
+      ],
+      "stockCount": 10,
+      "sold": 6,
+      "viewed": 41,
+      "comments": [
+        {
+          "name": "Aygün Həsənova",
+          "date": "2023-11-10",
+          "comment": "Simvolizmlə dolu ifadələr heyranedicidir."
+        },
+        {
+          "name": "Rauf Hüseynov",
+          "date": "2023-10-28",
+          "comment": "İnsanlığı duyğularla izah edir."
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Sonuncu Qıraq",
+      "author": "Ramil Vəliyev",
+      "price": 20,
+      "image": "https://picsum.photos/seed/book14/1000/1000",
+      "category": "Bədii",
+      "subcategory": [
+        "detektiv",
+        "dram"
+      ],
+      "language": [
+        "AZ"
+      ],
+      "stockCount": 9,
+      "sold": 11,
+      "viewed": 39,
+      "comments": [
+        {
+          "name": "Elçin Məmmədli",
+          "date": "2023-10-05",
+          "comment": "Detektiv süjet çox maraqlıdır."
+        },
+        {
+          "name": "Ləman Vəliyeva",
+          "date": "2023-09-22",
+          "comment": "Əsər finalda tamamilə təəccübləndirir."
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Yanmış Kəpənəklər",
+      "author": "Sevda Qasımova",
+      "price": 18,
+      "image": "https://picsum.photos/seed/book15/1000/1000",
+      "category": "Bədii",
+      "subcategory": [
+        "dram",
+        "psixoloji"
+      ],
+      "language": [
+        "AZ"
+      ],
+      "stockCount": 10,
+      "sold": 12,
+      "viewed": 51,
+      "comments": [
+        {
+          "name": "Zamin Əliyev",
+          "date": "2023-09-01",
+          "comment": "Obrazlar dərin və təsirli şəkildə qurulub."
+        },
+        {
+          "name": "Gülşən Cavadova",
+          "date": "2023-08-18",
+          "comment": "İnsanın daxili dünyasını sarsıdıcı şəkildə təqdim edir."
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "title": "İtmiş Səs",
+      "author": "Araz Məmmədov",
+      "price": 17,
+      "image": "https://picsum.photos/seed/book16/1000/1000",
+      "category": "Bədii",
+      "subcategory": [
+        "realizm",
+        "sosial"
+      ],
+      "language": [
+        "AZ"
+      ],
+      "stockCount": 13,
+      "sold": 10,
+      "viewed": 47,
+      "comments": [
+        {
+          "name": "Rəna Mustafayeva",
+          "date": "2023-07-25",
+          "comment": "Hər kəsin unudulmuş səsi bu kitabda danışır."
+        },
+        {
+          "name": "Eldar Sadıqov",
+          "date": "2023-07-07",
+          "comment": "Sosial ədalətsizlikləri açıq göstərir."
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Qəfəs",
+      "author": "Fəridə Mehdiyeva",
+      "price": 16,
+      "image": "https://picsum.photos/seed/book17/1000/1000",
+      "category": "Bədii",
+      "subcategory": [
+        "psixoloji",
+        "realizm"
+      ],
+      "language": [
+        "AZ"
+      ],
+      "stockCount": 12,
+      "sold": 9,
+      "viewed": 36,
+      "comments": [
+        {
+          "name": "Aysel Məlikova",
+          "date": "2023-06-15",
+          "comment": "İç dünyanı qandalda saxlamağın faciəsi."
+        },
+        {
+          "name": "Cavid Hüseynov",
+          "date": "2023-06-01",
+          "comment": "Qəlbin həbsxanasını açır bu kitab."
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "title": "Kül Rəngi Güzgü",
+      "author": "Əli Həsənli",
+      "price": 19,
+      "image": "https://picsum.photos/seed/book18/1000/1000",
+      "category": "Bədii",
+      "subcategory": [
+        "fantastika",
+        "simvolik"
+      ],
+      "language": [
+        "AZ"
+      ],
+      "stockCount": 9,
+      "sold": 13,
+      "viewed": 50,
+      "comments": [
+        {
+          "name": "Tunar Qasımov",
+          "date": "2023-05-20",
+          "comment": "Simvolik dillə yazılmış müasir fantaziya."
+        },
+        {
+          "name": "Mehriban Məmmədova",
+          "date": "2023-05-01",
+          "comment": "İnsan özü ilə üzləşməyə məcbur olur."
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "title": "Əlifba Sonrası",
+      "author": "Şəfa Hüseynli",
+      "price": 18,
+      "image": "https://picsum.photos/seed/book19/1000/1000",
+      "category": "Bədii",
+      "subcategory": [
+        "esse",
+        "modern"
+      ],
+      "language": [
+        "AZ"
+      ],
+      "stockCount": 14,
+      "sold": 11,
+      "viewed": 48,
+      "comments": [
+        {
+          "name": "Ramilə Quliyeva",
+          "date": "2023-04-10",
+          "comment": "Hər esse bir həyat dərsidir."
+        },
+        {
+          "name": "Nihat Əliyev",
+          "date": "2023-03-29",
+          "comment": "Düşündürücü və hisslə doludur."
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "title": "Təsadüf Deyil",
+      "author": "Sadiq Qasımov",
+      "price": 16,
+      "image": "https://picsum.photos/seed/book20/1000/1000",
+      "category": "Bədii",
+      "subcategory": [
+        "romantika",
+        "gündəlik"
+      ],
+      "language": [
+        "AZ"
+      ],
+      "stockCount": 15,
+      "sold": 15,
+      "viewed": 60,
+      "comments": [
+        {
+          "name": "Zəminə Məmmədova",
+          "date": "2023-03-15",
+          "comment": "Həyatda təsadüf deyilən heç nə yoxdur."
+        },
+        {
+          "name": "Rəşid Əliyev",
+          "date": "2023-03-01",
+          "comment": "Sakit və dərin bir hekayədir."
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "title": "İçimdəki Uçurum",
+      "author": "Murad Vəliyev",
+      "price": 17,
+      "image": "https://picsum.photos/seed/book21/1000/1000",
+      "category": "Bədii",
+      "subcategory": [
+        "psixoloji",
+        "monoloq"
+      ],
+      "language": [
+        "AZ"
+      ],
+      "stockCount": 13,
+      "sold": 12,
+      "viewed": 54,
+      "comments": [
+        {
+          "name": "Tural Həsənov",
+          "date": "2023-02-10",
+          "comment": "Oxucu ilə içi danışan bir kitabdır."
+        },
+        {
+          "name": "Könül Əliyeva",
+          "date": "2023-01-25",
+          "comment": "Yazıçı səssiz çığlığı ifadə edə bilib."
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "title": "Dumanlı Gecələr",
+      "author": "Gültac Əliyeva",
+      "price": 15,
+      "image": "https://picsum.photos/seed/book22/1000/1000",
+      "category": "Bədii",
+      "subcategory": [
+        "romantika",
+        "gündəlik"
+      ],
+      "language": [
+        "AZ"
+      ],
+      "stockCount": 11,
+      "sold": 9,
+      "viewed": 42,
+      "comments": [
+        {
+          "name": "Aydın Quliyev",
+          "date": "2023-01-05",
+          "comment": "Ruhun poetik səfəri kimidir."
+        },
+        {
+          "name": "Zəhra Məlikova",
+          "date": "2022-12-18",
+          "comment": "İnsanlar və münasibətlər incə şəkildə təsvir edilib."
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "title": "Gecə Çiçəkləri",
+      "author": "Nərgiz Hacıyeva",
+      "price": 16,
+      "image": "https://picsum.photos/seed/book23/1000/1000",
+      "category": "Bədii",
+      "subcategory": [
+        "poeziya"
+      ],
+      "language": [
+        "AZ"
+      ],
+      "stockCount": 13,
+      "sold": 8,
+      "viewed": 30,
+      "comments": [
+        {
+          "name": "Əli Məmmədli",
+          "date": "2022-12-01",
+          "comment": "Hər bənd ruhuma toxundu."
+        },
+        {
+          "name": "Könül Hüseynova",
+          "date": "2022-11-20",
+          "comment": "Poetik dildə gözəl duyğular var."
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "title": "Yuxu Yolları",
+      "author": "Turan Ələkbərov",
+      "price": 18,
+      "image": "https://picsum.photos/seed/book24/1000/1000",
+      "category": "Bədii",
+      "subcategory": [
+        "fantastika",
+        "psixoloji"
+      ],
+      "language": [
+        "AZ"
+      ],
+      "stockCount": 14,
+      "sold": 10,
+      "viewed": 48,
+      "comments": [
+        {
+          "name": "Lalə Qasımova",
+          "date": "2022-11-01",
+          "comment": "Yuxu və reallıq iç-içədir."
+        },
+        {
+          "name": "Həsən Məmmədov",
+          "date": "2022-10-20",
+          "comment": "Oxucuya paralel dünyalar təklif edir."
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "title": "Könül Dəftəri",
+      "author": "Zümrüd Abbasova",
+      "price": 16,
+      "image": "https://picsum.photos/seed/book25/1000/1000",
+      "category": "Bədii",
+      "subcategory": [
+        "esse",
+        "romantika"
+      ],
+      "language": [
+        "AZ"
+      ],
+      "stockCount": 12,
+      "sold": 9,
+      "viewed": 37,
+      "comments": [
+        {
+          "name": "İlqar Əliyev",
+          "date": "2022-10-01",
+          "comment": "Duyğularla yazılmış esselər toplusu."
+        },
+        {
+          "name": "Sevil Hüseynli",
+          "date": "2022-09-15",
+          "comment": "Səmimi və düşündürücü."
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "title": "Axşamüstü Hayal Sarayı",
+      "author": "Səidə Haşımova",
+      "price": 18,
+      "image": "https://picsum.photos/seed/book26/1000/1000",
+      "category": "Bədii",
+      "subcategory": [
+        "roman",
+        "hayal"
+      ],
+      "language": [
+        "AZ"
+      ],
+      "stockCount": 30,
+      "sold": 45,
+      "viewed": 120,
+      "comments": [
+        {
+          "name": "Aytən Məmmədova",
+          "date": "2024-11-12",
+          "comment": "Romantik xəyallar ruhuma toxundu."
+        },
+        {
+          "name": "Elvin Rəhimli",
+          "date": "2024-10-05",
+          "comment": "Yazıçının təsvir gücü inanılmaz."
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "title": "Göylərin Sirlər Uri",
+      "author": "Rəşad Quliyev",
+      "price": 20,
+      "image": "https://picsum.photos/seed/book27/1000/1000",
+      "category": "Bədii",
+      "subcategory": [
+        "fantastika",
+        "göy"
+      ],
+      "language": [
+        "AZ"
+      ],
+      "stockCount": 25,
+      "sold": 38,
+      "viewed": 110,
+      "comments": [
+        {
+          "name": "Sevinc Şükürova",
+          "date": "2024-09-23",
+          "comment": "Fantastik dünyalar çox təsirli yaradılıb."
+        },
+        {
+          "name": "Murad Əliyev",
+          "date": "2024-08-17",
+          "comment": "Elmi elementlər hekayəyə canlılıq qatır."
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "title": "Köhnə Şəhərin Xəzinəsi",
+      "author": "Leyla Əliyeva",
+      "price": 17,
+      "image": "https://picsum.photos/seed/book28/1000/1000",
+      "category": "Bədii",
+      "subcategory": [
+        "tarixi roman",
+        "macəra"
+      ],
+      "language": [
+        "AZ"
+      ],
+      "stockCount": 28,
+      "sold": 34,
+      "viewed": 95,
+      "comments": [
+        {
+          "name": "Orxan Məmmədov",
+          "date": "2024-07-04",
+          "comment": "Tarixi atmosfer çox inandırıcıdır."
+        },
+        {
+          "name": "Lalə Hüseynova",
+          "date": "2024-06-29",
+          "comment": "Sirlər və qarmaqarışıqlarla dolu hekayə."
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "title": "Qaranlıq Evin Sirri",
+      "author": "Emin Hacıyev",
+      "price": 19,
+      "image": "https://picsum.photos/seed/book29/1000/1000",
+      "category": "Bədii",
+      "subcategory": [
+        "sir",
+        "psixoloji"
+      ],
+      "language": [
+        "AZ"
+      ],
+      "stockCount": 20,
+      "sold": 27,
+      "viewed": 85,
+      "comments": [
+        {
+          "name": "Gülnar Əliyeva",
+          "date": "2024-10-01",
+          "comment": "Psixoloji gərginliyi əla qurulub."
+        },
+        {
+          "name": "Kamal Rzayev",
+          "date": "2024-09-15",
+          "comment": "Sonu gözlənilmədən dəyişir, bəyəndim."
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "title": "Səhrada Bir Bahar",
+      "author": "Nigar Məmmədova",
+      "price": 16,
+      "image": "https://picsum.photos/seed/book30/1000/1000",
+      "category": "Bədii",
+      "subcategory": [
+        "romantika",
+        "dram"
+      ],
+      "language": [
+        "AZ"
+      ],
+      "stockCount": 32,
+      "sold": 29,
+      "viewed": 90,
+      "comments": [
+        {
+          "name": "Ramin Hüseynli",
+          "date": "2024-08-08",
+          "comment": "Ürəklərə toxunan romantik hekayə."
+        },
+        {
+          "name": "Təranə Məmmədova",
+          "date": "2024-07-22",
+          "comment": "Dramatik anlar ürək ağrıdır."
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "title": "Kainatın Küncü",
+      "author": "Kamran Hüseynli",
+      "price": 90,
+      "image": "https://picsum.photos/seed/book31/1000/1000",
+      "category": "Bədii",
+      "subcategory": [
+        "sci-fi",
+        "gələcək"
+      ],
+      "language": [
+        "AZ"
+      ],
+      "stockCount": 26,
+      "sold": 33,
+      "viewed": 100,
+      "comments": [
+        {
+          "name": "Aytən Rəhimova",
+          "date": "2024-05-19",
+          "comment": "Gələcəyin təsvirləri çox maraqlıdır."
+        },
+        {
+          "name": "Nurlan Quliyev",
+          "date": "2024-04-01",
+          "comment": "Texnologiyalar realist təqdim olunub."
+        }
+      ],
+      "description": ""
+    },
+    {
+      "id": 32,
+      "title": "Qarasaç Koroğlu",
+      "author": "Röya İsmayılova",
+      "price": 21,
+      "image": "https://picsum.photos/seed/book32/1000/1000",
+      "category": "Bədii",
+      "subcategory": [
+        "folklor",
+        "epik"
+      ],
+      "language": [
+        "AZ"
+      ],
+      "stockCount": 29,
+      "sold": 24,
+      "viewed": 88,
+      "comments": [
+        {
+          "name": "Sevinc Məmmədova",
+          "date": "2024-03-15",
+          "comment": "Ənənəvi dastan gözəl canlandırılmışdır."
+        },
+        {
+          "name": "Elvin Hüseynli",
+          "date": "2024-02-27",
+          "comment": "Folk mədəniyyətimizi yaşadır."
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "title": "Səssiz Şəhər",
+      "author": "Vüsalə Əliyeva",
+      "price": 18,
+      "image": "https://picsum.photos/seed/book33/1000/1000",
+      "category": "Bədii",
+      "subcategory": [
+        "distopiya",
+        "dram"
+      ],
+      "language": [
+        "AZ"
+      ],
+      "stockCount": 24,
+      "sold": 30,
+      "viewed": 95,
+      "comments": [
+        {
+          "name": "Rəşad Məmmədov",
+          "date": "2024-01-10",
+          "comment": "Distopik atmosfer çox təsirli."
+        },
+        {
+          "name": "Murad Əliyev",
+          "date": "2023-12-25",
+          "comment": "Gələcək qorxuları real hiss olunur."
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "title": "Ulduzların Sirri",
+      "author": "Səbinə Qasımova",
+      "price": 23,
+      "image": "https://picsum.photos/seed/book34/1000/1000",
+      "category": "Bədii",
+      "subcategory": [
+        "fantastik roman",
+        "kosmos"
+      ],
+      "language": [
+        "AZ"
+      ],
+      "stockCount": 28,
+      "sold": 35,
+      "viewed": 110,
+      "comments": [
+        {
+          "name": "Lalə Məmmədova",
+          "date": "2024-11-01",
+          "comment": "Kosmosun sirli dünyası çox cəlbedicidir."
+        },
+        {
+          "name": "Kamal Rzayev",
+          "date": "2024-10-14",
+          "comment": "Həyacanlı və düşündürücü kitabdır."
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "title": "Dənizin Oyanışı",
+      "author": "Cavid Hüseynli",
+      "price": 19,
+      "image": "https://picsum.photos/seed/book35/1000/1000",
+      "category": "Bədii",
+      "subcategory": [
+        "natur roman",
+        "drama"
+      ],
+      "language": [
+        "AZ"
+      ],
+      "stockCount": 30,
+      "sold": 31,
+      "viewed": 102,
+      "comments": [
+        {
+          "name": "Gülnar Əliyeva",
+          "date": "2024-09-06",
+          "comment": "Təbii hadisələr çox ustalıqla təsvir olunub."
+        },
+        {
+          "name": "Elina Quliyeva",
+          "date": "2024-08-19",
+          "comment": "Oxuyanda sanki dəniz qoxusu gəlir."
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "title": "Qəlbimin Atlası",
+      "author": "Aysel Mehdiyeva",
+      "price": 20,
+      "image": "https://picsum.photos/seed/book36/1000/1000",
+      "category": "Bədii",
+      "subcategory": [
+        "sevgi",
+        "psixologiya"
+      ],
+      "language": [
+        "AZ"
+      ],
+      "stockCount": 26,
+      "sold": 38,
+      "viewed": 104,
+      "comments": [
+        {
+          "name": "Nigar Əliyeva",
+          "date": "2024-06-01",
+          "comment": "Emosional səviyyədə çox təsirli idi."
+        },
+        {
+          "name": "Kənan Qasımov",
+          "date": "2024-05-12",
+          "comment": "Duyğularla dolu bir səyahət."
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "title": "İz",
+      "author": "Zaur Rəhimov",
+      "price": 19,
+      "image": "https://picsum.photos/seed/book37/1000/1000",
+      "category": "Bədii",
+      "subcategory": [
+        "detektiv",
+        "thriller"
+      ],
+      "language": [
+        "AZ"
+      ],
+      "stockCount": 21,
+      "sold": 36,
+      "viewed": 97,
+      "comments": [
+        {
+          "name": "Emin Məmmədli",
+          "date": "2024-04-27",
+          "comment": "Hər səhifəsi bir sirr idi!"
+        },
+        {
+          "name": "Təranə Rüstəmova",
+          "date": "2024-04-08",
+          "comment": "Gərginlik sonadək saxlanılıb."
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "title": "Yuxusuz Gecələr",
+      "author": "Mehriban Hüseynova",
+      "price": 18,
+      "image": "https://picsum.photos/seed/book38/1000/1000",
+      "category": "Bədii",
+      "subcategory": [
+        "romantik",
+        "hisslər"
+      ],
+      "language": [
+        "AZ"
+      ],
+      "stockCount": 25,
+      "sold": 28,
+      "viewed": 82,
+      "comments": [
+        {
+          "name": "Namiq Həsənov",
+          "date": "2024-03-15",
+          "comment": "Sevgi hekayəsi ürəyimə toxundu."
+        },
+        {
+          "name": "Aygün Quliyeva",
+          "date": "2024-02-21",
+          "comment": "Oxuyarkən özümü baş qəhrəman kimi hiss etdim."
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "title": "Küləkli Səhərlər",
+      "author": "Süleyman Əliyev",
+      "price": 22,
+      "image": "https://picsum.photos/seed/book39/1000/1000",
+      "category": "Bədii",
+      "subcategory": [
+        "nostalji",
+        "roman"
+      ],
+      "language": [
+        "AZ"
+      ],
+      "stockCount": 23,
+      "sold": 33,
+      "viewed": 91,
+      "comments": [
+        {
+          "name": "Vəfa Rzayeva",
+          "date": "2024-01-19",
+          "comment": "Əvvəlki dövrlərin ab-havasını əla çatdırır."
+        },
+        {
+          "name": "Eldar Həsənov",
+          "date": "2023-12-30",
+          "comment": "Hər səhifə ilə uşaqlıq xatirələrim canlandı."
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "title": "Susqunluğun Sədası",
+      "author": "Ləman Abdullayeva",
+      "price": 20,
+      "image": "https://picsum.photos/seed/book40/1000/1000",
+      "category": "Bədii",
+      "subcategory": [
+        "psixoloji",
+        "realist"
+      ],
+      "language": [
+        "AZ"
+      ],
+      "stockCount": 30,
+      "sold": 29,
+      "viewed": 88,
+      "comments": [
+        {
+          "name": "Elgün Babayev",
+          "date": "2024-01-07",
+          "comment": "Daxili sükunət və gərginlik bir arada təqdim olunub."
+        },
+        {
+          "name": "Şəfiqə Məmmədova",
+          "date": "2023-12-14",
+          "comment": "Oxuduqca öz düşüncələrimlə üzləşdim."
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "title": "Ağ Qala",
+      "author": "Tunar Rəsulov",
+      "price": 21,
+      "image": "https://picsum.photos/seed/book41/1000/1000",
+      "category": "Bədii",
+      "subcategory": [
+        "fantaziya",
+        "macəra"
+      ],
+      "language": [
+        "AZ"
+      ],
+      "stockCount": 28,
+      "sold": 34,
+      "viewed": 93,
+      "comments": [
+        {
+          "name": "Rüfət Məmmədov",
+          "date": "2024-03-23",
+          "comment": "Mifoloji elementlər çox maraqlı şəkildə qurulub."
+        },
+        {
+          "name": "Zəhra Hacıyeva",
+          "date": "2024-02-09",
+          "comment": "Tamamilə başqa dünyaya düşdüm."
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "title": "Tənha Sahil",
+      "author": "Arzu Məmmədova",
+      "price": 17,
+      "image": "https://picsum.photos/seed/book42/1000/1000",
+      "category": "Bədii",
+      "subcategory": [
+        "sevgi",
+        "yalnızlıq"
+      ],
+      "language": [
+        "AZ"
+      ],
+      "stockCount": 22,
+      "sold": 27,
+      "viewed": 78,
+      "comments": [
+        {
+          "name": "Fidan Hüseynova",
+          "date": "2024-05-01",
+          "comment": "Yalnızlığın poetik təsviri mükəmməldir."
+        },
+        {
+          "name": "Sadiq Qasımov",
+          "date": "2024-04-13",
+          "comment": "Hisslərin çox dərinliyi var."
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "title": "Çayın Qırağında",
+      "author": "Elçin Cəfərov",
+      "price": 19,
+      "image": "https://picsum.photos/seed/book43/1000/1000",
+      "category": "Bədii",
+      "subcategory": [
+        "hekayələr",
+        "təbiət"
+      ],
+      "language": [
+        "AZ"
+      ],
+      "stockCount": 24,
+      "sold": 30,
+      "viewed": 85,
+      "comments": [
+        {
+          "name": "Zülfiyyə Abbasova",
+          "date": "2024-03-04",
+          "comment": "Sadə, amma dərindən düşündürən hekayələr."
+        },
+        {
+          "name": "Kənan Əliyev",
+          "date": "2024-02-01",
+          "comment": "Təbiətlə iç-içə bir sükunət."
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "title": "İşıqlı Gecə",
+      "author": "Fəridə Kazımova",
+      "price": 20,
+      "image": "https://picsum.photos/seed/book44/1000/1000",
+      "category": "Bədii",
+      "subcategory": [
+        "dram",
+        "həyat"
+      ],
+      "language": [
+        "AZ"
+      ],
+      "stockCount": 26,
+      "sold": 31,
+      "viewed": 90,
+      "comments": [
+        {
+          "name": "Əli Rüstəmli",
+          "date": "2024-01-25",
+          "comment": "Həyatın acı reallıqları gözəl təqdim olunub."
+        },
+        {
+          "name": "Şəms Quliyeva",
+          "date": "2023-12-10",
+          "comment": "Oxuyarkən içimdə bir işıq yandı."
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "title": "Yanvarın Səsi",
+      "author": "Taleh Həsənov",
+      "price": 18,
+      "image": "https://picsum.photos/seed/book45/1000/1000",
+      "category": "Bədii",
+      "subcategory": [
+        "tarixi dram",
+        "xatirə"
+      ],
+      "language": [
+        "AZ"
+      ],
+      "stockCount": 29,
+      "sold": 28,
+      "viewed": 87,
+      "comments": [
+        {
+          "name": "Tünzalə Əliyeva",
+          "date": "2024-01-19",
+          "comment": "Tarixi anlar çox duyğusal təsvir olunub."
+        },
+        {
+          "name": "Kamran Mehdiyev",
+          "date": "2023-12-20",
+          "comment": "Həqiqətləri oxuyarkən ürəyim ağrıdı."
+        }
+      ],
+      "description": ""
+    },
+    {
+      "id": 46,
+      "title": "Yarpaqlar Düşəndə",
+      "author": "Səkinə Nəcəfova",
+      "price": 17,
+      "image": "https://picsum.photos/seed/book46/1000/1000",
+      "category": "Bədii",
+      "subcategory": [
+        "payız",
+        "emosional"
+      ],
+      "language": [
+        "AZ"
+      ],
+      "stockCount": 20,
+      "sold": 24,
+      "viewed": 76,
+      "comments": [
+        {
+          "name": "Rəşid Məlikov",
+          "date": "2024-09-10",
+          "comment": "Payızın hüznünü belə hiss etməmişdim."
+        },
+        {
+          "name": "Zəhra Qurbanova",
+          "date": "2024-08-21",
+          "comment": "Emosional və poetik dillə yazılıb."
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "title": "Gecənin Rəngi",
+      "author": "Ramin Orucov",
+      "price": 22,
+      "image": "https://picsum.photos/seed/book47/1000/1000",
+      "category": "Bədii",
+      "subcategory": [
+        "sirli",
+        "qaranlıq"
+      ],
+      "language": [
+        "AZ"
+      ],
+      "stockCount": 23,
+      "sold": 29,
+      "viewed": 82,
+      "comments": [
+        {
+          "name": "Aytac Əliyeva",
+          "date": "2024-06-01",
+          "comment": "Qaranlıq gecələrin öz gözəlliyi varmış."
+        },
+        {
+          "name": "Eldəniz Rəhimov",
+          "date": "2024-05-13",
+          "comment": "Sirli atmosfer oxucunu içəri çəkir."
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "title": "Dağlar Arasında",
+      "author": "Zaur Hüseynov",
+      "price": 20,
+      "image": "https://picsum.photos/seed/book48/1000/1000",
+      "category": "Bədii",
+      "subcategory": [
+        "macəra",
+        "təbiət"
+      ],
+      "language": [
+        "AZ"
+      ],
+      "stockCount": 25,
+      "sold": 26,
+      "viewed": 79,
+      "comments": [
+        {
+          "name": "Samirə Cəfərova",
+          "date": "2024-04-10",
+          "comment": "Dağların dili ilə yazılmış bir roman."
+        },
+        {
+          "name": "Fuad Abbasov",
+          "date": "2024-03-28",
+          "comment": "Macəra həvəskarları üçün mükəmməldir."
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "title": "Zamanın Tozu",
+      "author": "Fidan Qasımova",
+      "price": 21,
+      "image": "https://picsum.photos/seed/book49/1000/1000",
+      "category": "Bədii",
+      "subcategory": [
+        "zaman",
+        "filosofik"
+      ],
+      "language": [
+        "AZ"
+      ],
+      "stockCount": 27,
+      "sold": 30,
+      "viewed": 91,
+      "comments": [
+        {
+          "name": "Elgiz Məmmədov",
+          "date": "2024-02-14",
+          "comment": "Zamanla bağlı düşüncələrə səbəb oldu."
+        },
+        {
+          "name": "Rəna Nəsirova",
+          "date": "2024-01-30",
+          "comment": "Filosofik dərinliyi çox xoşuma gəldi."
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "title": "Sonuncu Payız",
+      "author": "Nərgiz Əliyeva",
+      "price": 20,
+      "image": "https://picsum.photos/seed/book50/1000/1000",
+      "category": "Bədii",
+      "subcategory": [
+        "dram",
+        "sevgili xatirələri"
+      ],
+      "language": [
+        "AZ"
+      ],
+      "stockCount": 24,
+      "sold": 32,
+      "viewed": 89,
+      "comments": [
+        {
+          "name": "Süleyman Məmmədov",
+          "date": "2023-11-22",
+          "comment": "Yadda qalan sonluq idi."
+        },
+        {
+          "name": "Aysel Məlikova",
+          "date": "2023-11-05",
+          "comment": "Sevginin ən həssas halı belə təsvir olunub."
+        }
+      ]
+    },
+    {
+      "title": "Est nulla iste eum q",
+      "author": "Omnis molestiae ex m",
+      "category": "Assumenda itaque qua",
+      "price": 41,
+      "subcategory": [
+        "Facere proident vel"
+      ],
+      "description": "Vel dicta officia li",
+      "image": "https://i.pinimg.com/736x/f7/0d/df/f70ddf62b3ec6401eb612c7d824753dd.jpg",
+      "id": 52
+    },
+    {
+      "title": "Fugiat laborum cupi",
+      "author": "Sit nesciunt minim",
+      "category": "Voluptas repellendus",
+      "price": 4,
+      "subcategory": [
+        "Quia possimus asper"
+      ],
+      "description": "Aut inventore ad ali",
+      "image": "https://i.pinimg.com/736x/f7/0d/df/f70ddf62b3ec6401eb612c7d824753dd.jpg",
+      "id": 53
+    }
+  ],
+  "Slider": [
+    {
+      "id": 1,
+      "img": "https://www.libraff.az/images/abt__ut2/banners/all/1313/Banner_Desktop.webp"
+    },
+    {
+      "id": 2,
+      "img": "https://www.libraff.az/images/abt__ut2/banners/all/1313/Banner_Desktop_v2.webp"
+    },
+    {
+      "id": 3,
+      "img": "https://www.libraff.az/images/abt__ut2/banners/all/1310/3-web-3840x1000_7h5s-r9.webp"
+    },
+    {
+      "id": 4,
+      "img": "https://www.libraff.az/images/abt__ut2/banners/all/1310/01-web-3840x1000.webp"
+    },
+    {
+      "id": 5,
+      "img": "https://www.libraff.az/images/abt__ut2/banners/all/1305/Hero-banner-desktop-20_-discount.webp"
+    },
+    {
+      "id": 6,
+      "img": "https://www.libraff.az/images/abt__ut2/banners/all/1305/martin-iden-desktop.webp"
+    },
+    {
+      "id": 7,
+      "img": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flibraff.az%2Fimages%2Fcompanies%2F1%2F54eaee09-5-min.jpg%3F1614742452222&f=1&nofb=1&ipt=06f683264de8db76749955555b0e4df17a64931f33e1ebcabb207b0ece2163aa"
+    },
+    {
+      "id": 8,
+      "img": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Flibraff.az%2Fimages%2Fcompanies%2F1%2FLoyall%25C4%25B1q%2520Kart%25C4%25B1%2520-%2520Poster-min.jpg%3F1627602132965&f=1&nofb=1&ipt=c4fc4967075f4f7aa1048468e55b839276f242ec374830cb8a067cf725694fce"
+    },
+    {
+      "id": 9,
+      "img": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.libraff.az%2Fimages%2Fpromo%2F1292%2F9789750726439.jpg&f=1&nofb=1&ipt=362e36af5155441ae1c8ec9c435b07558a757b2b405b820d1da86cb524fcd238"
+    },
+    {
+      "id": 10,
+      "img": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.libraff.az%2Fimages%2Fblog%2F1177%2FBestseller-Xarici-Dill%25C9%2599rd%25C9%2599-2024-web-banner__1_.jpg&f=1&nofb=1&ipt=c314cb42c9b780ec9ebc6fce9431543da841d8d183e590517c5a4ac2284c9f05"
+    }
+  ]
+}

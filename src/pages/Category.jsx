@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback, useMemo } from "react";
-import { Search, Filter, BookOpen, ChevronDown, Grid, List, X } from "lucide-react";
+import { Search, Filter, BookOpen, ChevronDown, Grid, List, X, ChevronUp, ArrowUpDown } from "lucide-react";
 import { useBookContext } from "../context/BookContext";
 import FilteredBooks from "../components/FilteredBooks";
 import { useParams, useNavigate } from "react-router-dom";
@@ -12,6 +12,7 @@ function Category() {
    const [filteredBooks, setFilteredBooks] = useState([]);
    const [searchTerm, setSearchTerm] = useState("");
    const [sortBy, setSortBy] = useState("name");
+   const [sortOrder, setSortOrder] = useState("asc"); // New state for sort order
    const [viewMode, setViewMode] = useState("grid");
    const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
    const [expandedCategories, setExpandedCategories] = useState(new Set());
@@ -49,6 +50,28 @@ function Category() {
       });
    };
 
+   // New function to handle sorting button clicks
+   const handleSortClick = (sortType) => {
+      if (sortBy === sortType) {
+         // If clicking the same sort type, toggle order
+         setSortOrder(sortOrder === "asc" ? "desc" : "asc");
+      } else {
+         // If clicking a different sort type, set new sort and default to asc
+         setSortBy(sortType);
+         setSortOrder("asc");
+      }
+   };
+
+   // New function to get sort icon
+   const getSortIcon = (sortType) => {
+      if (sortBy !== sortType) {
+         return <ArrowUpDown className="w-4 h-4 text-gray-400" />;
+      }
+      return sortOrder === "asc" ? 
+         <ChevronUp className="w-4 h-4 text-red-600" /> : 
+         <ChevronDown className="w-4 h-4 text-red-600" />;
+   };
+
    useEffect(() => {
       let result = [...safeBooks];
 
@@ -65,24 +88,32 @@ function Category() {
          result = result.filter((b) => b.title?.toLowerCase().includes(searchLower) || b.author?.toLowerCase().includes(searchLower));
       }
 
+      // Updated sorting logic with order consideration
       result.sort((a, b) => {
+         let comparison = 0;
          switch (sortBy) {
             case "name":
-               return (a.title || "").localeCompare(b.title || "");
+               comparison = (a.title || "").localeCompare(b.title || "");
+               break;
             case "author":
-               return (a.author || "").localeCompare(b.author || "");
+               comparison = (a.author || "").localeCompare(b.author || "");
+               break;
             case "price":
-               return (Number(a.price) || 0) - (Number(b.price) || 0);
+               comparison = (Number(a.price) || 0) - (Number(b.price) || 0);
+               break;
             default:
                return 0;
          }
+         return sortOrder === "desc" ? -comparison : comparison;
       });
 
       setFilteredBooks(result);
-   }, [safeBooks, selectedCategory, selectedSubcategory, searchTerm, sortBy]);
+   }, [safeBooks, selectedCategory, selectedSubcategory, searchTerm, sortBy, sortOrder]);
 
    const clearFilters = () => {
       setSearchTerm("");
+      setSortBy("name");
+      setSortOrder("asc");
       navigate("/categories");
    };
 
@@ -214,12 +245,43 @@ function Category() {
                            <input type="text" placeholder="Kitab və ya müəllif axtar..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none" />
                         </div>
 
-                        <div className="flex gap-3 items-center">
-                           <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="px-3 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none text-sm">
-                              <option value="name">Ada görə</option>
-                              <option value="author">Müəllifə görə</option>
-                              <option value="price">Qiymətə görə</option>
-                           </select>
+                        <div className="flex gap-3 items-center flex-wrap">
+                           {/* New sorting buttons */}
+                           <div className="flex gap-1 bg-gray-50 rounded-lg p-1">
+                              <button
+                                 onClick={() => handleSortClick("name")}
+                                 className={`flex items-center gap-1 px-3 py-1 rounded-md text-sm font-medium transition-colors ${
+                                    sortBy === "name" 
+                                       ? "bg-white text-red-600 shadow-sm" 
+                                       : "text-gray-600 hover:text-gray-900 hover:bg-white"
+                                 }`}
+                              >
+                                 Ada görə
+                                 {getSortIcon("name")}
+                              </button>
+                              <button
+                                 onClick={() => handleSortClick("author")}
+                                 className={`flex items-center gap-1 px-3 py-1 rounded-md text-sm font-medium transition-colors ${
+                                    sortBy === "author" 
+                                       ? "bg-white text-red-600 shadow-sm" 
+                                       : "text-gray-600 hover:text-gray-900 hover:bg-white"
+                                 }`}
+                              >
+                                 Müəllifə görə
+                                 {getSortIcon("author")}
+                              </button>
+                              <button
+                                 onClick={() => handleSortClick("price")}
+                                 className={`flex items-center gap-1 px-3 py-1 rounded-md text-sm font-medium transition-colors ${
+                                    sortBy === "price" 
+                                       ? "bg-white text-red-600 shadow-sm" 
+                                       : "text-gray-600 hover:text-gray-900 hover:bg-white"
+                                 }`}
+                              >
+                                 Qiymətə görə
+                                 {getSortIcon("price")}
+                              </button>
+                           </div>
 
                            <div className="flex rounded-lg border border-gray-200 overflow-hidden">
                               <button onClick={() => setViewMode("grid")} className={`p-2 transition-colors ${viewMode === "grid" ? "bg-red-500 text-white" : "bg-white text-gray-600 hover:bg-gray-50"}`} aria-label="Grid view">
@@ -269,6 +331,11 @@ function Category() {
                   <div className="mb-4 sm:mb-6 flex items-center justify-between">
                      <p className="text-sm sm:text-base text-gray-600">
                         <span className="font-semibold text-gray-900">{filteredBooks.length}</span> kitab tapıldı
+                        {sortBy && (
+                           <span className="ml-2 text-xs text-gray-500">
+                              ({sortBy === "name" ? "Ada" : sortBy === "author" ? "Müəllifə" : "Qiymətə"} görə {sortOrder === "asc" ? "artan" : "azalan"})
+                           </span>
+                        )}
                      </p>
                   </div>
 

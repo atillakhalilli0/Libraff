@@ -1,12 +1,12 @@
 import { NavLink } from "react-router-dom";
-import { ShoppingCart, Heart, Menu, X } from "lucide-react";
-import { useState } from "react";
+import { ShoppingCart, Heart, Menu, X, User2 } from "lucide-react";
+import { useEffect, useState } from "react";
 import Logo from "../../img/logo.png";
 import { useBookContext } from "../context/BookContext";
 
 function Navbar() {
    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-   const { basketOpen, favoritesOpen, toggleBasket, toggleFavorites, getTotalItemCount, getFavoritesCount } = useBookContext();
+   const { basketOpen, favoritesOpen, toggleBasket, toggleFavorites, getTotalItemCount, getFavoritesCount, toggleProfile, isLoggedIn } = useBookContext();
 
    const basketCount = getTotalItemCount();
    const favoritesCount = getFavoritesCount();
@@ -67,10 +67,12 @@ function Navbar() {
                      <NavLink to="/basket" className={({ isActive }) => `px-3 py-1 rounded-md font-medium transition duration-200 ${isActive ? "text-blue-700" : "text-gray-800 hover:text-blue-500"}`}>
                         Sebet
                      </NavLink>
+                     {isLoggedIn && (
+                        <NavLink to="/admin" onClick={closeMobileMenu} className={({ isActive }) => `px-3 py-1 rounded-md font-medium transition duration-200 ${isActive ? "text-blue-700" : "text-gray-800 hover:text-blue-500"}`}>
+                           Admin
+                        </NavLink>
+                     )}
 
-                     <NavLink to="/admin" className={({ isActive }) => `px-3 py-1 rounded-md font-medium transition duration-200 ${isActive ? "text-blue-700" : "text-gray-800 hover:text-blue-500"}`}>
-                        Admin
-                     </NavLink>
                      <NavLink to="/order" className={({ isActive }) => `px-3 py-1 rounded-md font-medium transition duration-200 ${isActive ? "text-blue-700" : "text-gray-800 hover:text-blue-500"}`}>
                         Order
                      </NavLink>
@@ -86,6 +88,10 @@ function Navbar() {
                   <button onClick={toggleBasket} className={`relative p-2 rounded-full backdrop-blur-md transition ${basketOpen ? "bg-emerald-100 text-emerald-600" : "bg-white/20 text-gray-800 hover:bg-white/30"}`}>
                      <ShoppingCart className="w-5 h-5 md:w-6 md:h-6" />
                      {basketCount > 0 && <span className="absolute -top-1 -right-1 bg-emerald-500 text-white text-xs rounded-full h-4 w-4 md:h-5 md:w-5 flex items-center justify-center text-[10px] md:text-xs">{basketCount}</span>}
+                  </button>
+
+                  <button onClick={toggleProfile} className={`relative p-2 rounded-full backdrop-blur-md transition ${basketOpen ? "bg-emerald-100 text-emerald-600" : "bg-white/20 text-gray-800 hover:bg-white/30"}`}>
+                     <User2 className="w-5 h-5 md:w-6 md:h-6" />
                   </button>
 
                   <button onClick={toggleMobileMenu} className="md:hidden p-2 rounded-full bg-white/20 text-gray-800 hover:bg-white/30 backdrop-blur-md transition">
@@ -120,9 +126,11 @@ function Navbar() {
                <NavLink to="/basket" onClick={closeMobileMenu} className={({ isActive }) => `block px-4 py-3 rounded-lg font-medium transition duration-200 ${isActive ? "bg-blue-100 text-blue-700" : "text-gray-800 hover:bg-gray-100"}`}>
                   Sebet
                </NavLink>
-               <NavLink to="/admin" onClick={closeMobileMenu} className={({ isActive }) => `block px-4 py-3 rounded-lg font-medium transition duration-200 ${isActive ? "bg-blue-100 text-blue-700" : "text-gray-800 hover:bg-gray-100"}`}>
-                  Admin
-               </NavLink>
+               {isLoggedIn && (
+                  <NavLink to="/admin" onClick={closeMobileMenu} className={({ isActive }) => `block px-4 py-3 rounded-lg font-medium transition duration-200 ${isActive ? "bg-blue-100 text-blue-700" : "text-gray-800 hover:bg-gray-100"}`}>
+                     Admin
+                  </NavLink>
+               )}
             </div>
          </div>
       </>

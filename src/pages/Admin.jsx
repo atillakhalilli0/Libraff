@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useBookContext } from "../context/BookContext";
-import { Search, Plus, Edit2, Trash2, Eye, BookOpen, Users, TrendingUp } from "lucide-react";
+import { Search, Plus, Edit2, Trash2, Eye, BookOpen, Users, TrendingUp, ChevronUp, ChevronDown, ArrowUpDown, SortAscIcon } from "lucide-react";
 import Swal from "sweetalert2";
 
 const Admin = () => {
@@ -8,6 +8,8 @@ const Admin = () => {
 
    const [searchTerm, setSearchTerm] = useState("");
    const [selectedCategory, setSelectedCategory] = useState("");
+   const [sortBy, setSortBy] = useState("title");
+   const [sortOrder, setSortOrder] = useState("asc");
    const [isModalOpen, setIsModalOpen] = useState(false);
    const [editingBook, setEditingBook] = useState(null);
    const [formData, setFormData] = useState({
@@ -35,6 +37,26 @@ const Admin = () => {
          description: "",
       });
       setEditingBook(null);
+   };
+
+   // Function to handle sorting button clicks
+   const handleSortClick = (sortType) => {
+      if (sortBy === sortType) {
+         // If clicking the same sort type, toggle order
+         setSortOrder(sortOrder === "asc" ? "desc" : "asc");
+      } else {
+         // If clicking a different sort type, set new sort and default to asc
+         setSortBy(sortType);
+         setSortOrder("asc");
+      }
+   };
+
+   // Function to get sort icon
+   const getSortIcon = (sortType) => {
+      if (sortBy !== sortType) {
+         return <ArrowUpDown className="w-4 h-4 text-gray-400" />;
+      }
+      return sortOrder === "asc" ? <ChevronUp className="w-4 h-4 text-blue-600" /> : <ChevronDown className="w-4 h-4 text-blue-600" />;
    };
 
    const openModal = (book = null) => {
@@ -138,11 +160,39 @@ const Admin = () => {
       }
    };
 
-   const filteredBooks = books.filter((book) => {
-      const matchesSearch = book.title?.toLowerCase().includes(searchTerm.toLowerCase()) || book.author?.toLowerCase().includes(searchTerm.toLowerCase());
-      const matchesCategory = !selectedCategory || book.category === selectedCategory;
-      return matchesSearch && matchesCategory;
-   });
+   // Updated filtering and sorting logic
+   const filteredAndSortedBooks = books
+      .filter((book) => {
+         const matchesSearch = book.title?.toLowerCase().includes(searchTerm.toLowerCase()) || book.author?.toLowerCase().includes(searchTerm.toLowerCase());
+         const matchesCategory = !selectedCategory || book.category === selectedCategory;
+         return matchesSearch && matchesCategory;
+      })
+      .sort((a, b) => {
+         let comparison = 0;
+         switch (sortBy) {
+            case "title":
+               comparison = (a.title || "").localeCompare(b.title || "");
+               break;
+            case "author":
+               comparison = (a.author || "").localeCompare(b.author || "");
+               break;
+            case "price":
+               comparison = (Number(a.price) || 0) - (Number(b.price) || 0);
+               break;
+            case "stock":
+               comparison = (Number(a.stockCount) || 0) - (Number(b.stockCount) || 0);
+               break;
+            case "sold":
+               comparison = (Number(a.sold) || 0) - (Number(b.sold) || 0);
+               break;
+            case "category":
+               comparison = (a.category || "").localeCompare(b.category || "");
+               break;
+            default:
+               return 0;
+         }
+         return sortOrder === "desc" ? -comparison : comparison;
+      });
 
    const categories = [...new Set(books.map((book) => book.category).filter(Boolean))];
    const totalStock = books.reduce((sum, book) => sum + (book.stockCount || 0), 0);
@@ -196,25 +246,37 @@ const Admin = () => {
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-sm border mb-6">
-               <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
-                  <div className="flex flex-col md:flex-row gap-4 flex-1">
-                     <div className="relative">
-                        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
-                        <input type="text" placeholder="Kitab və ya müəllif axtar..." className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 w-64" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
+               <div className="flex flex-col gap-4">
+                  <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
+                     <div className="flex flex-col md:flex-row gap-4 flex-1">
+                        <div className="relative">
+                           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+                           <input type="text" placeholder="Kitab və ya müəllif axtar..." className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 w-64" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
+                        </div>
+                        <select className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)}>
+                           <option value="">Bütün kateqoriyalar</option>
+                           {categories.map((category) => (
+                              <option key={category} value={category}>
+                                 {category}
+                              </option>
+                           ))}
+                        </select>
                      </div>
-                     <select className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)}>
-                        <option value="">Bütün kateqoriyalar</option>
-                        {categories.map((category) => (
-                           <option key={category} value={category}>
-                              {category}
-                           </option>
-                        ))}
-                     </select>
+                     <button onClick={() => openModal()} className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg flex items-center gap-2 transition-colors">
+                        <Plus className="h-4 w-4" />
+                        Yeni Kitab
+                     </button>
                   </div>
-                  <button onClick={() => openModal()} className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg flex items-center gap-2 transition-colors">
-                     <Plus className="h-4 w-4" />
-                     Yeni Kitab
-                  </button>
+
+                  {/* Sort status indicator */}
+                  <div className="text-sm text-gray-600">
+                     <span className="font-medium">{filteredAndSortedBooks.length}</span> kitab tapıldı
+                     {sortBy && (
+                        <span className="ml-2 text-xs text-gray-500">
+                           ({sortBy === "title" ? "Başlığa" : sortBy === "author" ? "Müəllifə" : sortBy === "price" ? "Qiymətə" : sortBy === "stock" ? "Stoka" : sortBy === "sold" ? "Satışa" : "Kateqoriyaya"} görə {sortOrder === "asc" ? "artan" : "azalan"})
+                        </span>
+                     )}
+                  </div>
                </div>
             </div>
 
@@ -223,17 +285,47 @@ const Admin = () => {
                   <table className="min-w-full divide-y divide-gray-200">
                      <thead className="bg-gray-50">
                         <tr>
-                           <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Kitab</th>
-                           <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Müəllif</th>
-                           <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Qiymət</th>
-                           <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Stok</th>
-                           <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Satılan</th>
-                           <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Kateqoriya</th>
+                           <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                              <button onClick={() => handleSortClick("title")} className={`flex items-center gap-2 hover:text-gray-700 transition-colors ${sortBy === "title" ? "text-blue-600" : ""}`}>
+                                 Kitab
+                                 {getSortIcon("title")}
+                              </button>
+                           </th>
+                           <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                              <button onClick={() => handleSortClick("author")} className={`flex items-center gap-2 hover:text-gray-700 transition-colors ${sortBy === "author" ? "text-blue-600" : ""}`}>
+                                 Müəllif
+                                 {getSortIcon("author")}
+                              </button>
+                           </th>
+                           <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                              <button onClick={() => handleSortClick("price")} className={`flex items-center gap-2 hover:text-gray-700 transition-colors ${sortBy === "price" ? "text-blue-600" : ""}`}>
+                                 Qiymət
+                                 {getSortIcon("price")}
+                              </button>
+                           </th>
+                           <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                              <button onClick={() => handleSortClick("stock")} className={`flex items-center gap-2 hover:text-gray-700 transition-colors ${sortBy === "stock" ? "text-blue-600" : ""}`}>
+                                 Stok
+                                 {getSortIcon("stock")}
+                              </button>
+                           </th>
+                           <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                              <button onClick={() => handleSortClick("sold")} className={`flex items-center gap-2 hover:text-gray-700 transition-colors ${sortBy === "sold" ? "text-blue-600" : ""}`}>
+                                 Satılan
+                                 {getSortIcon("sold")}
+                              </button>
+                           </th>
+                           <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                              <button onClick={() => handleSortClick("category")} className={`flex items-center gap-2 hover:text-gray-700 transition-colors ${sortBy === "category" ? "text-blue-600" : ""}`}>
+                                 Kateqoriya
+                                 {getSortIcon("category")}
+                              </button>
+                           </th>
                            <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">Əməliyyatlar</th>
                         </tr>
                      </thead>
                      <tbody className="bg-white divide-y divide-gray-200">
-                        {filteredBooks.map((book) => (
+                        {filteredAndSortedBooks.map((book) => (
                            <tr key={book.id} className="hover:bg-gray-50">
                               <td className="px-6 py-4 whitespace-nowrap">
                                  <div className="flex items-center">

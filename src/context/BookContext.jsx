@@ -5,7 +5,7 @@ const BookContext = createContext();
 
 export const useBookContext = () => useContext(BookContext);
 
-const BASE_URL = import.meta.env.VITE_BASE_URL || "https://libraffdata-atilla.onrender.com/kitablar";
+const BASE_URL = "https://libraffdata-atilla.onrender.com";
 
 export const BookProvider = ({ children }) => {
    const [books, setBooks] = useState([]);
@@ -13,11 +13,15 @@ export const BookProvider = ({ children }) => {
    const [favorites, setFavorites] = useState([]);
    const [basketOpen, setBasketOpen] = useState(false);
    const [favoritesOpen, setFavoritesOpen] = useState(false);
+   const [profileOpen, setProfileOpen] = useState(false);
+   const [user, setUser] = useState(null);
+   const [authLoading, setAuthLoading] = useState(false);
+   const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem("loggedin") === "true");
 
    useEffect(() => {
       async function fetchBooks() {
          try {
-            const res = await fetch(`${BASE_URL}`);
+            const res = await fetch(`${BASE_URL}/kitablar`);
             if (!res.ok) throw new Error("API ilə problem yarandı!");
             const data = await res.json();
             setBooks(Array.isArray(data) ? data : []);
@@ -48,14 +52,43 @@ export const BookProvider = ({ children }) => {
       localStorage.setItem("favorites", JSON.stringify(favorites));
    }, [favorites]);
 
+   useEffect(() => {
+      try {
+         const savedUser = localStorage.getItem("user");
+         if (savedUser) setUser(JSON.parse(savedUser));
+      } catch (err) {
+         console.error("Kullanıcı bilgilerini okuma hatası:", err);
+      }
+   }, []);
+
+   useEffect(() => {
+      if (user) {
+         localStorage.setItem("user", JSON.stringify(user));
+         localStorage.setItem("loggedin", "true");
+         setIsLoggedIn(true);
+      } else {
+         localStorage.removeItem("user");
+         localStorage.removeItem("loggedin");
+         setIsLoggedIn(false);
+      }
+   }, [user]);
+
    const toggleBasket = () => {
       setBasketOpen(!basketOpen);
+      setProfileOpen(false);
       setFavoritesOpen(false);
    };
 
    const toggleFavorites = () => {
       setFavoritesOpen(!favoritesOpen);
+      setProfileOpen(false);
       setBasketOpen(false);
+   };
+
+   const toggleProfile = () => {
+      setProfileOpen(!profileOpen);
+      setBasketOpen(false);
+      setFavoritesOpen(false);
    };
 
    const addToBasket = (bookItem) => {
@@ -108,7 +141,7 @@ export const BookProvider = ({ children }) => {
 
    const createBook = async (newBook) => {
       try {
-         const res = await axios.post(`${BASE_URL}`, newBook, {
+         const res = await axios.post(`${BASE_URL}/kitablar`, newBook, {
             headers: { "Content-Type": "application/json" },
          });
          if (res.status === 200 || res.status === 201) {
@@ -125,7 +158,7 @@ export const BookProvider = ({ children }) => {
 
    const updateBook = async (updatedBook) => {
       try {
-         const res = await axios.put(`${BASE_URL}/${updatedBook.id}`, updatedBook, {
+         const res = await axios.put(`${BASE_URL}/kitablar/${updatedBook.id}`, updatedBook, {
             headers: { "Content-Type": "application/json" },
          });
          if (res.status === 200) {
@@ -142,7 +175,7 @@ export const BookProvider = ({ children }) => {
 
    const deleteBook = async (bookId) => {
       try {
-         const res = await axios.delete(`${BASE_URL}/${bookId}`);
+         const res = await axios.delete(`${BASE_URL}/kitablar/${bookId}`);
          if (res.status === 200 || res.status === 204) {
             setBooks((prev) => prev.filter((book) => book.id !== bookId));
             return { ok: true };
@@ -164,16 +197,73 @@ export const BookProvider = ({ children }) => {
       }
    );
 
+   const createUser = async (newUser) => {
+      try {
+         setAuthLoading(true);
+         const res = await axios.post(`${BASE_URL}/users`, newUser, {
+            headers: { "Content-Type": "application/json" },
+         });
+         if (res.status === 200 || res.status === 201) {
+            const created = res.data;
+            setUser(created);
+            setProfileOpen(false);
+            return { ok: true, user: created };
+         }
+         throw new Error(`Status: ${res.status}`);
+      } catch (err) {
+         console.error("Create user error:", err);
+         return { ok: false, error: err.response?.data?.message || err.message };
+      } finally {
+         setAuthLoading(false);
+      }
+   };
+
+   const loginUser = async (credentials) => {
+      try {
+         setAuthLoading(true);
+         const res = await axios.get(`${BASE_URL}/users`);
+         const users = res.data;
+
+         const foundUser = users.find((user) => user.email === credentials.email && user.password === credentials.password);
+
+         if (foundUser) {
+            setUser(foundUser);
+            setProfileOpen(false);
+            return { ok: true, user: foundUser };
+         } else {
+            return { ok: false, error: "Email və ya şifrə yalnışdır" };
+         }
+      } catch (err) {
+         console.error("Login error:", err);
+         return { ok: false, error: "Giriş zamanı xəta baş verdi" };
+      } finally {
+         setAuthLoading(false);
+      }
+   };
+
+   const logoutUser = () => {
+      setUser(null);
+      setAuthLoading(false);
+   };
+
    return (
       <BookContext.Provider
          value={{
             books,
             setBooks,
             basket,
+            user,
+            authLoading,
+            createUser,
+            loginUser,
+            logoutUser,
+            toggleProfile,
             setBasket,
             favorites,
             basketOpen,
             favoritesOpen,
+            profileOpen,
+            setProfileOpen,
             toggleBasket,
             toggleFavorites,
             addToBasket,
@@ -189,6 +279,8 @@ export const BookProvider = ({ children }) => {
             createBook,
             updateBook,
             deleteBook,
+            isLoggedIn,
+            setIsLoggedIn,
          }}
       >
          {children}
